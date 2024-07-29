@@ -2,13 +2,13 @@
 
 ## Table of content
 
-- 1. NTRODUCTION
+-  NTRODUCTION
   - What is Next.js
   - Why learn Next.js
   - Prerequisites
   - Project folder structure
   - React Server Component
-- 2. Routing
+- 1. Routing
   - Routing
   - Nested routes
   - Dynamic routes
@@ -17,10 +17,10 @@
   - Private folder
   - Grouping routes
   - 
-- 3. Layouts
-- 4. Routing Metadata
-- 5. Navigation
-
+- 2. Layouts
+- 3. Routing Metadata
+- 4. Navigation
+- 5. Templates & Loading Component
 
 ## 1. INTRODUCTION
 
@@ -196,8 +196,20 @@ The layout components should render the children prop for the child page to rend
 - The `default` key provides a fallback title for child route segments, while the `template` key creates dynamic titles with prefixes or suffixes.
 - The `absolute` key ignores the template set in parent segments, providing a completely new title.
 
-## 5. Navigation
+## 4. Navigation
 
 - To navigate between pages, Next.js provides a built-in router component. `Link` and `Router` components are used to create links and navigate between pages.
 - The `Link` component is used to create links to other pages, while the `Router` component is used to navigate between pages.
 - The `Link` component accepts a `href` prop, which is used to specify the URL to navigate to.
+
+## 5. Templates
+1. Next.js' app router provides a special file called the template file.
+2. Template files can be used when a new instance of a component is needed for each child on navigation.
+3. Templates keep common elements untouched, but create new instances for each child, unlike layouts.
+4. Template files are useful for scenarios like enter/exit animations or running side effects on route change.
+5. To use a template, export a default React component from a `template.js` or `template.TSX` file.
+6. Templates should be used sparingly, and layouts should be the go-to for shared UI.
+
+## 6. Loading Component
+The loading.TSX file is used to create loading states in a React application.
+This file should be added to the designated folder for the specific route segment, such as blog route.
