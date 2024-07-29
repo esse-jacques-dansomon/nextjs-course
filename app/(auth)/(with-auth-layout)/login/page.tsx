@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function page() {
+
+export default function Login() {
   return (
     <div>
-      <h1>Forgot password</h1>
+      <h1>Login</h1>
     </div>
   )
 }
-
