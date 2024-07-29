@@ -18,6 +18,7 @@
   - Grouping routes
   - 
 - 3. Layouts
+- 4. Routing Metadata
 
 
 ## 1. INTRODUCTION
@@ -176,3 +177,20 @@ Next.js provides a root layout in the app folder, which is mandatory for every N
 The root layout can be customized by adding elements like a header and footer inside the body tag.
 
 The layout components should render the children prop for the child page to render its unique UI.
+
+## Routing Metadata
+
+1. Proper search engine optimization is crucial for web application visibility.
+2. Metadata API allows defining metadata for each page, ensuring accurate and relevant information is displayed during sharing or indexing.
+3. Both layout.TSX and page.TSX files can export metadata, with page metadata taking precedence if both are present.
+4. Static metadata objects and dynamic generate metadata functions can be used to configure metadata in a layout or page.
+5. In static metadata, the deepest segment takes priority during merging, while in dynamic metadata, a generate metadata function returns a metadata object based on dynamic information.
+6. Only one of the metadata object or generate metadata function can be exported from the same route segment.
+
+### title 
+- The title field in metadata is crucial for routing, with a primary purpose of defining the document title.
+- The title field can be set using a string value, which is the simplest way and is used in layout.TSX and page.TSX files.
+- For more flexibility, the title field can be defined as an object in the root layout, using the `metadata` type.
+- The object format supports three keys: `absolute`, `default`, and `template`, each serving different purposes.
+- The `default` key provides a fallback title for child route segments, while the `template` key creates dynamic titles with prefixes or suffixes.
+- The `absolute` key ignores the template set in parent segments, providing a completely new title.
