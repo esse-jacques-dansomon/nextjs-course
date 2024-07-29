@@ -2,7 +2,7 @@
 
 ## Table of content
 
-- 1. INTRODUCTION
+- 1. NTRODUCTION
   - What is Next.js
   - Why learn Next.js
   - Prerequisites
@@ -19,6 +19,7 @@
   - 
 - 3. Layouts
 - 4. Routing Metadata
+- 5. Navigation
 
 
 ## 1. INTRODUCTION
@@ -194,3 +195,9 @@ The layout components should render the children prop for the child page to rend
 - The object format supports three keys: `absolute`, `default`, and `template`, each serving different purposes.
 - The `default` key provides a fallback title for child route segments, while the `template` key creates dynamic titles with prefixes or suffixes.
 - The `absolute` key ignores the template set in parent segments, providing a completely new title.
+
+## 5. Navigation
+
+- To navigate between pages, Next.js provides a built-in router component. `Link` and `Router` components are used to create links and navigate between pages.
+- The `Link` component is used to create links to other pages, while the `Router` component is used to navigate between pages.
+- The `Link` component accepts a `href` prop, which is used to specify the URL to navigate to.
