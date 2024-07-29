@@ -21,6 +21,7 @@
 - 3. Routing Metadata
 - 4. Navigation
 - 5. Templates & Loading Component
+- 6. Error Handling
 
 ## 1. INTRODUCTION
 
@@ -213,3 +214,5 @@ The layout components should render the children prop for the child page to rend
 ## 6. Loading Component
 The loading.TSX file is used to create loading states in a React application.
 This file should be added to the designated folder for the specific route segment, such as blog route.
+
+## 7. Error Handling

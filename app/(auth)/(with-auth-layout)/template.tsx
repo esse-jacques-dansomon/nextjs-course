@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
 
-export default function layout({ children } : { children: React.ReactNode }) {   
+export default function Template({ children } : { children: React.ReactNode }) {   
   const [email, setEmail] = useState("" );
   const [password, setPassword] = useState("");
 
