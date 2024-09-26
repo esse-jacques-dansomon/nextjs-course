@@ -6,7 +6,7 @@ export default function Card(
 ) {
   return (
    <div 
-   className="block bg-black text-black rounded-lg bg-whie p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
+   className="block min-h-10 bg-black text-white rounded-lg  p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
       {children}
     </div>
   )

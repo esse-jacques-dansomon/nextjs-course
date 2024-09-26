@@ -5,15 +5,18 @@ export default function Layout(
       children,
       analystics,
       notifications,
-      users
+      users,
+      login
    } :
     { 
       children: React.ReactNode ,
       analystics: React.ReactNode,
       notifications: React.ReactNode,
       users: React.ReactNode
+      login: React.ReactNode
    }) {
-  return (
+    const  isLoggedIn  = false
+  return  isLoggedIn ? (
     <div>
       <div className="">{children}</div>
       <div className="flex flex-row  gap-3">
@@ -26,5 +29,5 @@ export default function Layout(
          </div>
       </div>
     </div>
-  )
+  ) : (login)
 }
