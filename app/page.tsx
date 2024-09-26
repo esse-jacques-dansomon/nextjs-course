@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-  title: 'title',
-  description: 'Esse este o descrição',
+  title: 'NextJs courses',
+  description: 'NextJs courses',
 }
 
 function page() {

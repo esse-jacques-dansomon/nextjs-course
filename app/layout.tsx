@@ -13,6 +13,9 @@ const links = [
   { href: '/docs', label: 'Docs' },
   { href: '/faq', label: 'Faq' },
   { href: '/dashboard', label: 'Dashboard' },
+  { href: '/f1', label: 'F1' },
+  { href: '/order-product', label: 'Order Product' },
+  { href: '/photo-feed', label: 'Photo Feed' },
 ]
 
 
