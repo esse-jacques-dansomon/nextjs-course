@@ -2,12 +2,12 @@
 
 ## Table of content
 
--  NTRODUCTION
-  - What is Next.js
-  - Why learn Next.js
-  - Prerequisites
-  - Project folder structure
-  - React Server Component
+- NTRODUCTION
+- What is Next.js
+- Why learn Next.js
+- Prerequisites
+- Project folder structure
+- React Server Component
 - 1. Routing
   - Routing
   - Nested routes
@@ -16,7 +16,7 @@
   - Not found
   - Private folder
   - Grouping routes
-  - 
+  -
 - 2. Layouts
 - 3. Routing Metadata
 - 4. Navigation
@@ -26,6 +26,7 @@
 ## 1. INTRODUCTION
 
 ### What is Next.js
+
 Next.js is a React framework for building web applications, providing additional features beyond React's view layer.
 
 ### Why learn it
@@ -111,21 +112,24 @@ my-nextjs-app/
 ### React Server Component
 
 #### 1. Server Component
+
 - In Next.js, all components are Server Components by default.
 - The have the ability to run tasks like reading files, fetching data, and manipulating data before rendering the component.
 - However, they don't have access to the DOM, and they can't interact with the browser.
-  
+
 #### 2. Client Component
+
 - Client components are React components that run in the browser.
 - To create a client component, it's necessary to add the `use client` directive at the top of the component.
 - Client components can't perform tasks like reading files, fetching data, or manipulating data before rendering but they can interact with the browser by using the DOM and hooks.
-  
+
 #### 3. React Server Components and Routing
+
 - React Server Components are used to render pages on the server by awaiting certain tasks before rendering the page.
 - Client components are use to leverage hooks from the routing module
 
-
 ## 2. Routing
+
 - In Next.js, routing is based on a file system, where URL paths are defined by files and folders within your code base.
 - Routes must be placed inside the `app` folder, which is within the `src` folder.
 - Every file that represents a route should be named `page.js` or `page.tsx`, depending on whether TypeScript is used.
@@ -134,12 +138,14 @@ my-nextjs-app/
 - If a URL cannot map to a file in the `app` folder, Next.js will automatically respond with a 404 not found response.
 
 ### Nested routes
+
 - Nested routes are defined by placing a folder inside the `app` folder.
 - By creating a folder inside the `app` folder, you can create a nested route.
 - For example, if you have a route called `blog` and you want to create a nested route called `post`, you would create a folder called `post` inside the `blog` folder.
 - The `post` folder would then contain a `page.tsx` file, which would map to the `/blog/post` URL.
 
 ### Dynamic routes
+
 - Dynamic routes are defined by using dynamic parameters in the URL.
 - Dynamic parameters are defined by using the `[param]` syntax in the URL.
 - For example, if you have a route called `blog` and you want to create a dynamic route for a specific post, you would create a folder called `[post]` inside the `blog` folder.
@@ -152,14 +158,13 @@ The catch all segment is a special segment that matches any URL path that doesn'
 
 For example, if you have a route called `blog` and you want to create a catch all route for all posts, you would create a folder called `[...post]` inside the `blog` folder.
 
-###  Not found
+### Not found
 
 If a URL cannot map to a file in the `app` folder, Next.js will automatically respond with a 404 not found response.
 
 ### Private folder
 
 The `app` folder is a private folder, which means that it's not accessible from the browser.
-
 
 ### Grouping routes
 
@@ -189,7 +194,8 @@ The layout components should render the children prop for the child page to rend
 5. In static metadata, the deepest segment takes priority during merging, while in dynamic metadata, a generate metadata function returns a metadata object based on dynamic information.
 6. Only one of the metadata object or generate metadata function can be exported from the same route segment.
 
-### title 
+### title
+
 - The title field in metadata is crucial for routing, with a primary purpose of defining the document title.
 - The title field can be set using a string value, which is the simplest way and is used in layout.TSX and page.TSX files.
 - For more flexibility, the title field can be defined as an object in the root layout, using the `metadata` type.
@@ -204,6 +210,7 @@ The layout components should render the children prop for the child page to rend
 - The `Link` component accepts a `href` prop, which is used to specify the URL to navigate to.
 
 ## 5. Templates
+
 1. Next.js' app router provides a special file called the template file.
 2. Template files can be used when a new instance of a component is needed for each child on navigation.
 3. Templates keep common elements untouched, but create new instances for each child, unlike layouts.
@@ -212,7 +219,16 @@ The layout components should render the children prop for the child page to rend
 6. Templates should be used sparingly, and layouts should be the go-to for shared UI.
 
 ## 6. Loading Component
+
 The loading.TSX file is used to create loading states in a React application.
 This file should be added to the designated folder for the specific route segment, such as blog route.
 
 ## 7. Error Handling
+
+![alt text](image.png)
+
+- `not-found.tsx`: Handles 404 errors and provides a link to return to the homepage.
+- `error.tsx`: Handles unexpected errors globally, with a button to try again.
+- `error-boundary.tsx`: Catches errors in its child components and displays a fallback UI.
+
+* Error handling in layout

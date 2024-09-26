@@ -12,6 +12,7 @@ const links = [
   { href: '/users', label: 'Users' },
   { href: '/docs', label: 'Docs' },
   { href: '/faq', label: 'Faq' },
+  { href: '/dashboard', label: 'Dashboard' },
 ]
 
 
@@ -27,7 +28,7 @@ children: React.ReactNode
 return (
 <html lang="en">
 
-<body className="bg-gray-100 text-gray-900">
+<body className="bg-white text-gray-900">
     <header className="bg-blue-100 h-20 flex flex-col items-space-between justify-center px-4">
         <nav className="flex justify-between items-center">
             <ul className='flex items-center gap-3'>
